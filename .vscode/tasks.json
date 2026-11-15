@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build 3D Engine",
+            "command": "C:/TDM-GCC-64/bin/g++.exe",
+            "args": [
+                "-std=c++17",
+                "-g",
+                "main.cpp",
+                "Engine3D.cpp",
+                "Camera.cpp",
+                "Light.cpp",
+                "BitmapHandler.cpp",
+                "GameObject3D.cpp",
+                "Cube.cpp",
+                "Pyramid.cpp",
+                "Sphere.cpp",
+                "-o",
+                "app.exe",
+                "-I",
+                "C:/Libraries/SFML-2.6.1/include",
+                "-L",
+                "C:/Libraries/SFML-2.6.1/lib",
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+                "-lopengl32",
+                "-lglu32"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
